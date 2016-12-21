@@ -1,4 +1,4 @@
-# CSE544Homework
+# CSE544_Homework
 ## Homework 1: Data Analytics Pipeline
 ### Objectives
 To get familiar with the main components of the data analytic pipeline: schema design, data acquisition, data transformation, querying and visualizing.
