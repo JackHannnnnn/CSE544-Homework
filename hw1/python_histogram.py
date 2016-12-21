@@ -12,7 +12,7 @@ import numpy as np
 
 
 def main():
-    #Connect to the 'dblp' database
+    # Connect to the 'dblp' database
     try:
         conn = psycopg2.connect("dbname='dblp' user='postgres' host='localhost' password='chaofanok'")
     except:
@@ -20,7 +20,7 @@ def main():
 
     cur = conn.cursor()
 
-    #Define the queries to be implemented
+    # Define the queries to be implemented
     queries = {
     'Number of Collaborators': 
         '''
@@ -42,7 +42,7 @@ def main():
         '''
     }
     
-    #Draw two graphs
+    # Draw two graphs
     fig, axes = plt.subplots(2, 1)
     plt.subplots_adjust(hspace=0.8)
     for i, (name, query) in enumerate(queries.items()):
@@ -56,7 +56,7 @@ def main():
         axes[i].set_xlabel(name)
         axes[i].set_ylabel('Number of Authors')
     
-    #Output the file
+    # Output the file
     file_name = 'graph.pdf'
     plt.savefig(file_name)
     print 'Output the gragh as in the file %s' % file_name
