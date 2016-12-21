@@ -940,7 +940,7 @@ Result:
 (77 rows)
 */
 
--- q7. Find the institutions that have published most papers in STOC; return the top 20 institutions.
+-- q7. Find the institutions that have published most papers in STOC; Return the top 20 institutions.
 
 CREATE VIEW Insti AS (
 		SELECT AuthorID, SPLIT_PART(Homepage, '/', 3) AS Institution
